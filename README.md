@@ -1,4 +1,5 @@
-curveminator v1
+Curveminator v1
+
 Simple curve editor written in Python.
 
 
