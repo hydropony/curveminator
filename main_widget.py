@@ -187,7 +187,7 @@ class MainWidget(QMainWindow):
             json.dump(jdata, outfile, ensure_ascii=False, indent=4)
 
         print("amogs")
-        # outfile.close()
+        outfile.close()
 
     def loadState(self):
         text, ok = QInputDialog.getText(self, 'Input Dialog',
