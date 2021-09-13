@@ -174,15 +174,20 @@ class MainWidget(QMainWindow):
         for i in range(0, len(self.board.curves[0].plotpoints)):
             x = (self.board.curves[0].plotpoints[i][0] - 0.5) * 144
             print(x)
-            y = (self.board.curves[0].plotpoints[i][0] - 0.5) * 144
+            y = -(self.board.curves[0].plotpoints[i][1] - 0.5) * 144
             outpoints.append((x, y))
         print("gud")
+        # jpoints = json.dumps(outpoints)
+        print(outpoints)
+        keys = ['x', 'y']
+        jdata = [dict(zip(keys, jpoint)) for jpoint in outpoints]
+        json_data = json.dumps(jdata, indent=4)
+        print(json_data)
         with open('data.json', 'w', encoding='utf-8') as outfile:
-            json.dump(outpoints, outfile, ensure_ascii=False, indent=4)
+            json.dump(jdata, outfile, ensure_ascii=False, indent=4)
 
         print("amogs")
-        outfile.close()
-
+        # outfile.close()
 
     def loadState(self):
         text, ok = QInputDialog.getText(self, 'Input Dialog',
