@@ -87,7 +87,7 @@ class MainWidget(QMainWindow):
 
         # self.board.setStyleSheet("QWidget { background-color: %s }" %
         #                          QColor(255, 255, 255).name())
-        self.board.setStyleSheet("background-image : url(UltimateGoalFieldDark.png);")
+        self.board.setStyleSheet("background-image : url(FreightFrenzyField.png);")
         self.board.setSizePolicy(QSizePolicy.Expanding,
                                  QSizePolicy.Expanding)
         self.board.setMaximumSize(800, 800)
